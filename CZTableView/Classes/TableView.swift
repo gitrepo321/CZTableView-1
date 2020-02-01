@@ -25,7 +25,7 @@ public protocol PlaceholderDelegate: class {
 }
 
 ///  A table view  that allows to show easily placeholders like no results, no internet connection, etc
-public class TableView: UITableView {
+open class TableView: UITableView {
     private let refresh = UIRefreshControl()
     private var loadingView: UIView!
     private var indicator: UIActivityIndicatorView!
