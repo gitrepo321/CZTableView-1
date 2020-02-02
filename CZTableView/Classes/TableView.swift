@@ -271,7 +271,7 @@ open class TableView: UITableView {
     func justReload(){
         page = 0
         previousItemCount = 0
-        pagingDelegate?.paginate(to: self, for: page)
+        pagingDelegate?.paginate(to: page, for: self)
     }
     
     /**
