@@ -200,6 +200,8 @@ open class TableView: UITableView {
     }
     @objc func didPulltoRefresh(){
         self.refreshControl?.beginRefreshing()
+        page = 0
+        previousItemCount = 0
         self.pagingDelegate?.didCallRefreshTableView(for: self)
     }
     // MARK: - Manage table view data and placeholders
