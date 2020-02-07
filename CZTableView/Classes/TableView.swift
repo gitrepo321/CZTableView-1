@@ -124,7 +124,7 @@ open class TableView: UITableView {
      * A Boolean value that determines whether bouncing always occurs when the placeholder is shown.
      * The default value is false
      */
-    open var placeholdersAlwaysBounceVertical = false
+    open var placeholdersAlwaysBounceVertical = true
     
     // MARK: - Private properties
     
