@@ -10,18 +10,18 @@ import UIKit
 
 
 /// The delegate of a TableView/CollectionView object must adopt the PlaceholderDelegate protocol. the method of the protocol allow the delegate to perform placeholders action.
-public protocol PaginateDelegate {
-    func didCallRefreshTableView(for tableView:TableView)
-    func paginate(to page: Int,for tableView:TableView)
+@objc public protocol PaginateDelegate {
+    @objc func didCallRefreshTableView(for tableView:TableView)
+    @objc func paginate(to page: Int,for tableView:TableView)
 }
-public protocol PlaceholderDelegate: class {
+@objc public protocol PlaceholderDelegate: class {
     
     /// Performs the action to the delegate of the table or collection view
     ///
     /// - Parameters:
     ///   - view: the table view or the collection
     ///   - placeholder: The placeholder source of the action
-    func view(_ view: Any, actionButtonTappedFor placeholder: Placeholder)
+    @objc func view(_ view: Any, actionButtonTappedFor placeholder: Placeholder)
 }
 
 ///  A table view  that allows to show easily placeholders like no results, no internet connection, etc
@@ -56,7 +56,7 @@ open class TableView: UITableView {
      * The object that acts as the delegate of the table view placeholders.
      * The delegate must adopt the PlaceholderDelegate protocol. The delegate is not retained.
      */
-    public weak var placeholderDelegate: PlaceholderDelegate?
+    @objc public weak var placeholderDelegate: PlaceholderDelegate?
     
     /**
      * The object that acts as the data source of the table view.
